@@ -24,6 +24,10 @@ body {
   color: #333333;
 }
 
+body.__lock {
+  overflow: hidden;
+}
+
 .wrapper {
   min-height: 100%;
   display: flex;
@@ -82,6 +86,7 @@ body {
   width: 30px;
   height: 20px;
   z-index: 2;
+  overflow: hidden;
 }
 
 .icon-menu span,
@@ -93,11 +98,13 @@ body {
   background-color: black;
   border-radius: 20px;
   position: absolute;
+  transition: all 0.3s ease 0s;
 }
 
 .icon-menu span {
   top: 50%;
   transform: translateY(-50%);
+  right: 0;
 }
 
 .icon-menu::before {
@@ -108,6 +115,20 @@ body {
 .icon-menu::after {
   content: "";
   bottom: 0;
+}
+
+.icon-menu.__active span {
+  right: -100%;
+}
+
+.icon-menu.__active::before {
+  top: 50%;
+  transform: rotate(45deg) translateY(-50%);
+}
+
+.icon-menu.__active::after {
+  top: 50%;
+  transform: rotate(-45deg) translateY(-50%);
 }
 
 /* ============================================================================================= */
@@ -152,6 +173,7 @@ body {
     height: 100%;
     background-color: #c2bfbf;
     overflow: auto;
+    transition: left 0.3s ease 0s;
   }
 
   .header__menu::before {
@@ -162,6 +184,12 @@ body {
     width: 100%;
     height: 60px;
     background-color: #c2bfbf;
+    transition: left 0.3s ease 0s;
+  }
+
+  .header__menu.__active,
+  .header__menu.__active::before {
+    left: 0;
   }
 
   .menu__list {
