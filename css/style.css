@@ -24,7 +24,7 @@ body {
   color: #333333;
 }
 
-body.__lock {
+body._lock {
   overflow: hidden;
 }
 
@@ -117,16 +117,16 @@ body.__lock {
   bottom: 0;
 }
 
-.icon-menu.__active span {
+.icon-menu._active span {
   right: -100%;
 }
 
-.icon-menu.__active::before {
+.icon-menu._active::before {
   top: 50%;
   transform: rotate(45deg) translateY(-50%);
 }
 
-.icon-menu.__active::after {
+.icon-menu._active::after {
   top: 50%;
   transform: rotate(-45deg) translateY(-50%);
 }
@@ -187,8 +187,8 @@ body.__lock {
     transition: left 0.3s ease 0s;
   }
 
-  .header__menu.__active,
-  .header__menu.__active::before {
+  .header__menu._active,
+  .header__menu._active::before {
     left: 0;
   }
 
