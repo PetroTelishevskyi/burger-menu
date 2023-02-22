@@ -12,7 +12,34 @@
     <title>Burger menu</title>
   </head>
   <body>
-    <div class="wrapper"></div>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__container">
+          <div class="header__logo"></div>
+          <!-- initial burger menu -->
+          <div class="header__icon-menu icon-menu"><span></span></div>
+          <!-- ------------------- -->
+          <nav class="header__menu menu">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a class="menu__link" href="">Section 1</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="">Section 2</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <main class="page">
+        <section class="page__section section" id="section-1">
+          <div class="section__container">1</div>
+        </section>
+        <section class="page__section section" id="section-2">
+          <div class="section__container">2</div>
+        </section>
+      </main>
+    </div>
     <script src="js/script.js" defer></script>
   </body>
 </html>
